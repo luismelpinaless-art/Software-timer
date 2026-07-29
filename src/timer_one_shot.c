@@ -27,12 +27,6 @@ tm->event = EVT_TIMER_IDLE;
 return;
 }
 
-
-
-if(tm->event == EVT_TIMER_DONE){
-	tm->event = EVT_TIMER_IDLE;
-}
-
 if(tm->period_reached == true){
 	tm->period_reached = false;
 }
