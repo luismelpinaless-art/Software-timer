@@ -1,1 +1,33 @@
+/* USER CODE BEGIN Includes */
+#include "timer_one_shot.h"
+/* USER CODE END Includes */
 
+/* Private variables ---------------------------------------------------------*/
+/* USER CODE BEGIN PV */
+TIMER tm1; // Instance of the TIMER object
+/* USER CODE END PV */
+
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN 0 */
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){ //Callback function that drives the TIMER object; it sets the period_reached variable to true every time it's called
+	if(htim == &htim1){
+		tm1.period_reached = true;
+	}
+}
+/* USER CODE END 0 */
+
+int main(){
+  timer_init(&tm1, 500); //initialization of the TIMER instance
+  timer_set(&tm1);       // This function allows you to set the timer if it was reset before, but as a design decision, every timer starts with active = true
+
+while(1){
+if(tm1.period_reached == true){ //Update the TIMER
+		 timer_update(&tm1);
+	   }
+
+ if(tm1.event == EVT_TIMER_DONE){             //We use the current event to produce a change in some part of the system, in this case, a pin.
+		 HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_0);
+	   }
+  }
+}
