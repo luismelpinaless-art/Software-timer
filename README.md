@@ -4,7 +4,7 @@ Embedded software timer library in C.
 ## Status 
 V1.0.0 - one_shot
 
-# Design decisions
+## Design decisions
 - 'period_reached' it's a volatile variable because it's manipulated by an external interrupt (HAL Callback).
 - One_shot > reaches its limit, the counter resets
 
