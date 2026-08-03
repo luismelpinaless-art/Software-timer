@@ -20,6 +20,7 @@ if(tm == NULL){
 
 if(tm->active == false){
 	tm->active = true;
+	tm->counter = 0;
 	}
 }
 
@@ -27,9 +28,9 @@ void timer_reset(TIMER *tm){
 if(tm == NULL){
 	return;
 }
-
 if(tm->active == true){
 	tm->active = false;
+	tm->counter = 0;
 	}
 }
 
