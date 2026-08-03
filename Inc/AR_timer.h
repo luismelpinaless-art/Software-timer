@@ -1,5 +1,5 @@
-#ifndef TIMER_ONE_SHOT_H
-#define TIMER_ONE_SHOT_H
+#ifndef AR_TIMER_H
+#define AR_TIMER_H
 #include "stdbool.h"
 #include "stdint.h"
 #include "stm32f4xx_hal.h"
