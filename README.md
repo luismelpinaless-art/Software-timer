@@ -10,6 +10,6 @@ V1.0.0 - one_shot
 
   ## Roadmap
 - [x] One-shot timer
-- [ ] Continuous timer
-- [ ] C/OS mode (continuous, one-shot mode)
+- [ ] Auto Reload timer
+- [ ] AR/OS mode (continuous, one-shot mode)
 - [ ] Opaque pointer + function pointer (periodic callback execution)
