@@ -2,16 +2,18 @@
 Software timer library in C for embedded systems.
 
 ## Status 
-- V1.0.0 - One_shot
-- V1.1.0 - AR_timer
-
+- v1.0.0 - One_shot
+- v1.1.0 - AR_timer
+- v1.2.0 - AR_OS_timer
+  
 ## Design decisions
 - 'period_reached' is a volatile variable because it is manipulated by an external interrupt (HAL Callback).
-- Once the one-shot reaches its limit, the counter resets.
+- Once the one-shot timer reaches its limit, the counter resets.
 - The AR_timer generates "EVT_TIMER_DONE" every time the timer expires.
+- The AR_OS_timer implements NULL pointer verification and sets 'period_reached' flag to false when the timer is reset
 
 ## Roadmap
 - [x] One_shot timer
 - [x] Auto Reload timer
-- [ ] AR/OS modes (Auto Reload mode, one_shot mode)
+- [x] AR/OS modes (Auto Reload mode, one_shot mode)
 - [ ] Time stamps timer + opaque pointer
