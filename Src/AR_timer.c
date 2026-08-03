@@ -1,4 +1,4 @@
-#include "timer_one_shot.h"
+#include <AR_timer.h>
 
 void timer_init(TIMER *tm, uint32_t limit){
 tm->counter = 0;
@@ -27,6 +27,10 @@ tm->event = EVT_TIMER_IDLE;
 return;
 }
 
+if(tm->event == EVT_TIMER_DONE){
+	tm->event = EVT_TIMER_IDLE;
+}
+
 if(tm->period_reached == true){
 	tm->period_reached = false;
 }
@@ -40,9 +44,3 @@ if(tm->counter >= tm->limit){
 	tm->event = EVT_TIMER_DONE;
 	}
 }
-
-
-
-
-
-
