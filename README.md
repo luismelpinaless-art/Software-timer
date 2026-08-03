@@ -2,8 +2,8 @@
 Embedded software timer library in C for embedded systems.
 
 ## Status 
-V1.0.0 - one_shot
-V1.1.0 - AR_timer
+- V1.0.0 - one_shot
+- V1.1.0 - AR_timer
 
 ## Design decisions
 - 'period_reached' is a volatile variable because it is manipulated by an external interrupt (HAL Callback).
