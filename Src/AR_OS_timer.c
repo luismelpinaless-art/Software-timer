@@ -49,7 +49,7 @@ if(tm->event == EVT_TIMER_DONE && tm->mode == true){
 	tm->event = EVT_TIMER_IDLE;
 }
 
-if(tm->period_reached == true && tm->mode == true){
+if(tm->period_reached == true){
 	tm->period_reached = false;
 }
 
