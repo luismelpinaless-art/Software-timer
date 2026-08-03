@@ -2,7 +2,7 @@
 #define AR_OS_TIMER_H
 #include "stdbool.h"
 #include "stdint.h"
-#include "stm32f4xx_hal.h"
+
 
 typedef enum{
 EVT_TIMER_IDLE,
