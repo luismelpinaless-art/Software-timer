@@ -1,5 +1,5 @@
 /* USER CODE BEGIN Includes */
-#include "timer_one_shot.h"
+#include "AR_timer.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
