@@ -17,4 +17,4 @@ Software timer library in C for embedded systems.
 - [x] Auto Reload timer
 - [x] AR/OS modes (Auto Reload mode, one_shot mode)
 - [ ] Time stamps timer + function pointer
-- [ ] Time manager + callabacks
+- [ ] Time manager + callbacks
