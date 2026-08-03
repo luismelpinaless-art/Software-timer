@@ -1,5 +1,5 @@
-#ifndef AR_TIMER_H
-#define AR_TIMER_H
+#ifndef AR_OS_TIMER_H
+#define AR_OS_TIMER_H
 #include "stdbool.h"
 #include "stdint.h"
 #include "stm32f4xx_hal.h"
@@ -13,11 +13,12 @@ typedef struct{
 uint32_t counter;
 uint32_t limit;
 bool active;
+bool mode;
 volatile bool period_reached;
 TIMER_EVT event;
 }TIMER;
 
-void timer_init(TIMER *tm, uint32_t limit);
+void timer_init(TIMER *tm, uint32_t limit, bool mod);
 void timer_set(TIMER *tm);
 void timer_reset(TIMER *tm);
 void timer_update(TIMER *tm);
