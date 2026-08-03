@@ -10,7 +10,7 @@ Software timer library in C for embedded systems.
 - 'period_reached' is a volatile variable because it is manipulated by an external interrupt (HAL Callback).
 - Once the one-shot timer reaches its limit, the counter resets.
 - The AR_timer generates "EVT_TIMER_DONE" every time the timer expires.
-- The AR_OS_timer implements NULL pointer verification and sets 'period_reached' flag to false when the timer is reset
+- The AR_OS_timer implements NULL pointer verification and "period-reached" is cleared on every timer_update() call regardless of the mode.
 
 ## Roadmap
 - [x] One_shot timer
